@@ -4,7 +4,7 @@
   "description": "Proyecto Node.js Agencia de viajes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS/issues"
   },
-  "homepage": "https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS#readme"
+  "homepage": "https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
