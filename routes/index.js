@@ -7,10 +7,8 @@ router.get('/', (req, res) =>{
     res.send("Welcome")
 })
 router.get('/nosotros', (req, res) =>{
-    res.send("Nosotros")
+    res.render("nosotros")
 })
-router.get('/contacto', (req, res) =>{
-    res.send("Contacto")
-})
+
 
 export default router;
