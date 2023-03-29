@@ -1,3 +1,5 @@
-#PROYECTO FULL STACK (NodeJS , JS , CSS, BOOTSTRAP) -> Agencia De Viaje 
+#PROYECTO FULL STACK 
 
-Proyecto realizado con Node.Js 
+(NodeJS , JS , MySQL CSS, BOOTSTRAP) -> Agencia De Viaje 
+
+Proyecto FULLSTACK
