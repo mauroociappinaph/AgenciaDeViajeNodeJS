@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS.git"
   },
+  "type": "module",
   "author": "Mauroo José Ciappina",
   "license": "ISC",
   "bugs": {
