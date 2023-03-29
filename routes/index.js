@@ -4,10 +4,19 @@ const router = express.Router();
 
 
 router.get('/', (req, res) =>{
-    res.send("Welcome")
+    res.render("inicio" , {
+        
+    })
 })
 router.get('/nosotros', (req, res) =>{
-    res.render("nosotros")
+
+const viajes = "Viaje a Brasil"
+
+
+    res.render("nosotros" , {
+        viajes
+    })
+   
 })
 
 
