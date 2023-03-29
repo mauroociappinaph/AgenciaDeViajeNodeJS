@@ -1,0 +1,19 @@
+{
+  "name": "agencia-de-viaje-nodejs",
+  "version": "1.0.0",
+  "description": "Proyecto Node.js Agencia de viajes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS.git"
+  },
+  "author": "Mauroo José Ciappina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS/issues"
+  },
+  "homepage": "https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS#readme"
+}
