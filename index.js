@@ -1,34 +1,19 @@
 import express from "express";
-import router from "./routes/index.js";
 
-const app = express();
+const router = express.Router();
 
-//Definir Puerto
-const port = process.env.PORT || 4000;
-
-//Habilitar PUG
-app.set("view engine", "pug");
-
-//? Pug es un motor de plantillas que simplifica la
-//? creación de vistas HTML dinámicas en una aplicación web,
-//? y es utilizado por muchos desarrolladores de Node.js y
-//? Express para generar vistas atractivas y fácilmente mantenibles.
-
-// Obtener el año actual
-app.use((req, res, next) => {
-  const year =new Date();
-  
-res.locals.actualYear = year.getFullYear();
-
-  return next();
+router.get("/", (req, res) => {
+  res.render("inicio", {
+    pagina: "inicio",
+  });
 });
 
-//Definir carpeta public
-app.use(express.static("public"));
+router.get("/nosotros", (req, res) => {
+  const viajes = "Viaje a Brasil";
 
-// Agregar Router
-app.use("/", router);
-
-app.listen(port, () => {
-  console.log(`El servidor está funcionando en el ${port}`);
+  res.render("nosotros", {
+    viajes,
+  });
 });
+
+export default router;
