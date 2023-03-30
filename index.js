@@ -15,6 +15,10 @@ app.set('view engine', 'pug' );
 //? y es utilizado por muchos desarrolladores de Node.js y 
 //? Express para generar vistas atractivas y fácilmente mantenibles.
 
+//Definir carpeta public
+app.use(express.static("public"))
+
+
 // Agregar Router
 app.use("/", router)
 
