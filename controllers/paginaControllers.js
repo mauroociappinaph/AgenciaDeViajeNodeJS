@@ -1,4 +1,5 @@
 import { Viaje } from "../models/Viaje.js";
+import { Testimonial } from "../models/Testimoniales.js";
 
 //!Funciones de renderizado de vistas
 const paginaInicio = (req, res) => {
@@ -40,10 +41,17 @@ const paginaDetalleViaje = async (req, res) => {
   }
 };
 
-const testimoniales = (req, res) => {
-  res.render("testimoniales", {
-    pagina: "Testimoniales",
-  });
+const testimoniales = async (req, res) => {
+
+  try {
+    const testimoniales = await Testimonial.findAll();
+    res.render("testimoniales", {
+      pagina: "Testimoniales",
+      testimoniales
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // Exportación de funciones
