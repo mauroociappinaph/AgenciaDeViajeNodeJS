@@ -1,19 +1,24 @@
 import { Viaje } from "../models/Viaje.js";
 import { Testimonial } from "../models/Testimoniales.js";
 
-//!Funciones de renderizado de vistas
+//ANCHOR -  Funciones de renderizado de vistas
+
+//TODO - Pagina de inicio
 const paginaInicio = (req, res) => {
   res.render("inicio", {
     pagina: "Inicio",
   });
 };
 
+//TODO - Pagina de nosotros
 const paginaNosotros = (req, res) => {
   res.render("nosotros", {
     pagina: "Nosotros",
   });
 };
 
+
+//TODO - Paginas de viaje 
 const paginaViajes = async (req, res) => {
   //!Consultar base de datos
   const viajes = await Viaje.findAll();
@@ -26,6 +31,8 @@ const paginaViajes = async (req, res) => {
   });
 };
 
+
+//TODO - Página detalle de viaje 
 const paginaDetalleViaje = async (req, res) => {
   const { slug } = req.params;
 
@@ -41,13 +48,14 @@ const paginaDetalleViaje = async (req, res) => {
   }
 };
 
-const testimoniales = async (req, res) => {
 
+//TODO - Testimoniales 
+const testimoniales = async (req, res) => {
   try {
     const testimoniales = await Testimonial.findAll();
     res.render("testimoniales", {
       pagina: "Testimoniales",
-      testimoniales
+      testimoniales,
     });
   } catch (error) {
     console.log(error);
