@@ -1,5 +1,4 @@
-import { Viaje}  from '../models/Viaje.js'
-
+import { Viaje } from "../models/Viaje.js";
 
 //!Funciones de renderizado de vistas
 const paginaInicio = (req, res) => {
@@ -18,12 +17,27 @@ const paginaViajes = async (req, res) => {
   //!Consultar base de datos
   const viajes = await Viaje.findAll();
 
-  console.log(viajes); 
+  console.log(viajes);
 
   res.render("viajes", {
-    pagina: "Viajes",
+    pagina: "Próximos Viajes",
     viajes,
   });
+};
+
+const paginaDetalleViaje = async (req, res) => {
+  const { slug } = req.params;
+
+  try {
+    const viaje = await Viaje.findOne({ where: { slug } });
+
+    res.render("viaje", {
+      pagina: "Información viaje",
+      viaje,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const testimoniales = (req, res) => {
@@ -33,4 +47,10 @@ const testimoniales = (req, res) => {
 };
 
 // Exportación de funciones
-export { paginaInicio, paginaViajes, paginaNosotros, testimoniales };
+export {
+  paginaInicio,
+  paginaViajes,
+  paginaDetalleViaje,
+  paginaNosotros,
+  testimoniales,
+};
