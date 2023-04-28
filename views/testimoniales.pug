@@ -10,13 +10,13 @@ block contenido
 
             .row.justify-content-center.col 
                 .col-md-8 
-                    form(action="" method="POST")
+                    form(action="/testimoniales" method="POST")
                         .form.group 
                             label(for="nombre") Nombre 
-                            input#nombre(type="text", placeholder="Tu Nombre", class="form-control")
+                            input#nombre(type="text",name="nombre", placeholder="Tu Nombre", class="form-control")
                         .form.group 
-                            label(for="Correo")  Correo  
-                            input#correo(type="text", placeholder="Tu Correo", class="form-control")
+                            label(for="correo")  Correo  
+                            input#correo(type="text", name="correo", placeholder="Tu Correo", class="form-control")
                         .form.group 
                             label(for="mensaje") Mensaje    
                             input#mensaje(name="mensaje", placeholder="Tu Mensaje", class="form-control" , rows= 3)

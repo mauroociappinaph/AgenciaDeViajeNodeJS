@@ -20,7 +20,8 @@ app.set("view engine", "pug");
 //? y es utilizado por muchos desarrolladores de Node.js y
 //? Express para generar vistas atractivas y fácilmente mantenibles.
 
-// Obtener el año actual
+//TODO -  Obtener el año actual
+
 app.use((req, res, next) => {
   const year = new Date();
 
@@ -29,10 +30,13 @@ app.use((req, res, next) => {
   return next();
 });
 
-//Definir carpeta public
+// TODO  Agregar body parser para leer los datos del formulario
+app.use(express.urlencoded({ extended: true }));
+
+//TODO - Definir carpeta public
 app.use(express.static("public"));
 
-// Agregar Router
+// TODO Agregar Router
 app.use("/", router);
 
 app.listen(port, () => {
