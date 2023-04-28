@@ -5,3 +5,21 @@ block contenido
         h1.text-center.mt-5 #{pagina}
         .row
            
+
+            h2.d-block.w-100.text-center Agregar un testimonial
+
+            .row.justify-content-center.col 
+                .col-md-8 
+                    form(action="" method="POST")
+                        .form.group 
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text", placeholder="Tu Nombre", class="form-control")
+                        .form.group 
+                            label(for="Correo")  Correo  
+                            input#correo(type="text", placeholder="Tu Correo", class="form-control")
+                        .form.group 
+                            label(for="mensaje") Mensaje    
+                            input#mensaje(name="mensaje", placeholder="Tu Mensaje", class="form-control" , rows= 3)
+
+
+                        input.btn.btn-success.btn-block(type="submit")
