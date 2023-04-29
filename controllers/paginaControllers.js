@@ -4,10 +4,20 @@ import { Testimonial } from "../models/Testimoniales.js";
 //ANCHOR -  Funciones de renderizado de vistas
 
 //TODO - Pagina de inicio
-const paginaInicio = (req, res) => {
-  res.render("inicio", {
-    pagina: "Inicio",
-  });
+const paginaInicio = async (req, res) => {
+  //NOTE -  Consultar tres viajes del modelo Viajes
+
+  try {
+    const viajes = await Viaje.findAll({ limit: 3 });
+
+    res.render("inicio", {
+      pagina: "Inicio",
+      clase: "home",
+      viajes,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 //TODO - Pagina de nosotros
@@ -17,8 +27,7 @@ const paginaNosotros = (req, res) => {
   });
 };
 
-
-//TODO - Paginas de viaje 
+//TODO - Paginas de viaje
 const paginaViajes = async (req, res) => {
   //!Consultar base de datos
   const viajes = await Viaje.findAll();
@@ -31,8 +40,7 @@ const paginaViajes = async (req, res) => {
   });
 };
 
-
-//TODO - Página detalle de viaje 
+//TODO - Página detalle de viaje
 const paginaDetalleViaje = async (req, res) => {
   const { slug } = req.params;
 
@@ -48,8 +56,7 @@ const paginaDetalleViaje = async (req, res) => {
   }
 };
 
-
-//TODO - Testimoniales 
+//TODO - Testimoniales
 const testimoniales = async (req, res) => {
   try {
     const testimoniales = await Testimonial.findAll();
