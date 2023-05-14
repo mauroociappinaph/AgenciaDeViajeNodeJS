@@ -4,7 +4,8 @@
   "description": "Proyecto Node.js Agencia de viajes",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/mauroociappinaph/AgenciaDeViajeNodeJS#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "pug": "^3.0.2"
   },
