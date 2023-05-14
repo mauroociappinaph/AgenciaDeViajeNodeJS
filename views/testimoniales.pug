@@ -5,6 +5,8 @@ block contenido
         h1.text-center.mt-5 #{pagina}
 
         blockquote.text-center Lee sobre nuestros clientes y sus experiencias 
+        include ./layout/bloque_testimoniales
+
         .row.testimoniales
             each testimonial in testimoniales 
                 .col-md-6.col-lg-4.mb-4 
