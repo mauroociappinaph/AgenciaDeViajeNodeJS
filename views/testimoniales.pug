@@ -2,5 +2,48 @@ extends ./layout/index
 
 block contenido 
     main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
+
+        blockquote.text-center Lee sobre nuestros clientes y sus experiencias 
+        include ./layout/bloque_testimoniales
+
+        .row.testimoniales
+            each testimonial in testimoniales 
+                .col-md-6.col-lg-4.mb-4 
+                    .card 
+                        .card-body 
+                            blockquote.blockquote 
+                            p.mb-0 
+                                | #{testimonial.mensaje}
+                            footer.blockquote-footer 
+                                | #{testimonial.nombre}
+
         .row
-            h1 #{pagina} 
+           
+            .col-md-12
+                h2.d-block.w-100.text-center Agregar un testimonial
+
+                if(errores)
+                    each error in errores 
+                        .alert.col.alert-danger.text-center=error.mensaje
+
+           
+
+            .row.justify-content-center.col 
+                .col-md-8 
+                    form(action="/testimoniales" method="POST")
+                        .form.group 
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text",name="nombre", placeholder="Tu Nombre", class="form-control"
+                            , value=nombre)
+                        .form.group 
+                            label(for="correo")  Correo  
+                            input#correo(type="text", name="correo", placeholder="Tu Correo", class="form-control",
+                            value=correo)
+                        .form.group 
+                            label(for="mensaje") Mensaje    
+                            input#mensaje(name="mensaje", placeholder="Tu Mensaje", class="form-control" , rows= 3,
+                            value=mensaje)
+
+
+                        input.btn.btn-success.btn-block(type="submit")

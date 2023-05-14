@@ -7,10 +7,11 @@ html(lang="en")
         link(rel='preconnect' href='https://fonts.googleapis.com')
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
-        title Document
-        link(rel="stylesheet", href=" /css/style.css")
+        title #{nombresitio} | #{pagina}
         link(rel="stylesheet", href="/css/bootstrap.css")
-    body
-        include header 
+        link(rel="stylesheet", href=" /css/style.css")
+    body(class=clase)
+        include header
+        block slider 
         block contenido 
         include footer 
