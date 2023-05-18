@@ -6,5 +6,5 @@
 
 🚀🔧 El servidor de la aplicación está realizado con Node.js, lo que permite un rendimiento eficiente y escalable para manejar las solicitudes y respuestas de los usuarios. Asimismo, utiliza Pug como motor de plantillas para renderizar la interfaz de usuario y se emplea CSS y Bootstrap para dar estilo y diseño a la misma, lo que permite una navegación intuitiva y agradable para el usuario.
 
-👍 En resumen, Agencia De Viaje es una aplicación web completa y bien diseñada que ofrece información confiable sobre destinos turísticos y transmite confianza en el servicio que brinda.
+
 
